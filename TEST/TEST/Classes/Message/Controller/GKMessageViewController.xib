@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GKMessageViewController">
             <connections>
+                <outlet property="contentTextView" destination="4QC-Bu-thR" id="J46-W9-5xF"/>
+                <outlet property="usernameField" destination="BPo-GU-Znz" id="udL-2j-uyQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -47,10 +49,16 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsT-IC-0A0">
                     <rect key="frame" x="50" y="236" width="60" height="30"/>
                     <state key="normal" title="选择图片"/>
+                    <connections>
+                        <action selector="pickImage:" destination="-1" eventType="touchUpInside" id="r0y-rn-5DT"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb0-HZ-JPT">
                     <rect key="frame" x="229" y="236" width="30" height="30"/>
                     <state key="normal" title="保存"/>
+                    <connections>
+                        <action selector="saveInToDB:" destination="-1" eventType="touchUpInside" id="0fz-FV-8vN"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

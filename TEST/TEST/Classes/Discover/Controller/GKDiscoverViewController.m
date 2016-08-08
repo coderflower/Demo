@@ -7,49 +7,43 @@
 //
 
 #import "GKDiscoverViewController.h"
-
+#import "GKDatabase.h"
+#import "GKDataModel.h"
+static NSString * const kDiscoverCellID = @"kDiscoverCellID";
 @interface GKDiscoverViewController ()
-
+/** 数据源 */
+@property(nonatomic, strong) NSArray *dataSource;
 @end
 
 @implementation GKDiscoverViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.dataSource = [[GKDatabaseManager sharedManager] selecteDataWithClass:[GKDataModel class]];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    
+    return self.dataSource.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kDiscoverCellID forIndexPath:indexPath];
     
-    // Configure the cell...
+
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

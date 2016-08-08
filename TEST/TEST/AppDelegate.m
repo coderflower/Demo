@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "GKMainViewController.h"
+#import "GKDatabase.h"
 @interface AppDelegate ()
 
 @end
@@ -24,8 +25,8 @@
     
     // 显示窗口
     [self.window makeKeyAndVisible];
-    
-    
+    // 打开数据库
+    [[GKDatabaseManager sharedManager]openDatabase];
     return YES;
 }
 

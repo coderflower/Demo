@@ -21,6 +21,16 @@
 		83FF53CA1D581BE00076C940 /* GKMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FF53C81D581BE00076C940 /* GKMessageViewController.xib */; };
 		83FF53CE1D581BFD0076C940 /* GKDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF53CC1D581BFD0076C940 /* GKDiscoverViewController.m */; };
 		83FF53CF1D581BFD0076C940 /* GKDiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FF53CD1D581BFD0076C940 /* GKDiscoverViewController.xib */; };
+		83FF53D31D582A130076C940 /* NSObject+GKAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF53D21D582A130076C940 /* NSObject+GKAlert.m */; };
+		83FF53DA1D582B9E0076C940 /* MBProgressHUD+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF53D61D582B9E0076C940 /* MBProgressHUD+Extension.m */; };
+		83FF53DB1D582B9E0076C940 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83FF53D71D582B9E0076C940 /* MBProgressHUD.bundle */; };
+		83FF53DC1D582B9E0076C940 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF53D91D582B9E0076C940 /* MBProgressHUD.m */; };
+		83FF53DF1D582C580076C940 /* GKDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF53DE1D582C580076C940 /* GKDataModel.m */; };
+		83FF53E91D582E590076C940 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FF53E81D582E590076C940 /* libsqlite3.tbd */; };
+		83FF54091D583A920076C940 /* GKDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF54061D583A920076C940 /* GKDatabaseManager.m */; };
+		83FF540A1D583A920076C940 /* GKObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF54081D583A920076C940 /* GKObjcProperty.m */; };
+		83FF54111D58412C0076C940 /* GKDiscoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF540F1D58412C0076C940 /* GKDiscoverViewCell.m */; };
+		83FF54121D58412C0076C940 /* GKDiscoverViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FF54101D58412C0076C940 /* GKDiscoverViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +57,24 @@
 		83FF53CB1D581BFD0076C940 /* GKDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDiscoverViewController.h; sourceTree = "<group>"; };
 		83FF53CC1D581BFD0076C940 /* GKDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDiscoverViewController.m; sourceTree = "<group>"; };
 		83FF53CD1D581BFD0076C940 /* GKDiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKDiscoverViewController.xib; sourceTree = "<group>"; };
+		83FF53D11D582A130076C940 /* NSObject+GKAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GKAlert.h"; sourceTree = "<group>"; };
+		83FF53D21D582A130076C940 /* NSObject+GKAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GKAlert.m"; sourceTree = "<group>"; };
+		83FF53D51D582B9E0076C940 /* MBProgressHUD+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Extension.h"; sourceTree = "<group>"; };
+		83FF53D61D582B9E0076C940 /* MBProgressHUD+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Extension.m"; sourceTree = "<group>"; };
+		83FF53D71D582B9E0076C940 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		83FF53D81D582B9E0076C940 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		83FF53D91D582B9E0076C940 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		83FF53DD1D582C580076C940 /* GKDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDataModel.h; sourceTree = "<group>"; };
+		83FF53DE1D582C580076C940 /* GKDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDataModel.m; sourceTree = "<group>"; };
+		83FF53E81D582E590076C940 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		83FF54041D583A920076C940 /* GKDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDatabase.h; sourceTree = "<group>"; };
+		83FF54051D583A920076C940 /* GKDatabaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDatabaseManager.h; sourceTree = "<group>"; };
+		83FF54061D583A920076C940 /* GKDatabaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDatabaseManager.m; sourceTree = "<group>"; };
+		83FF54071D583A920076C940 /* GKObjcProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKObjcProperty.h; sourceTree = "<group>"; };
+		83FF54081D583A920076C940 /* GKObjcProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKObjcProperty.m; sourceTree = "<group>"; };
+		83FF540E1D58412C0076C940 /* GKDiscoverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDiscoverViewCell.h; sourceTree = "<group>"; };
+		83FF540F1D58412C0076C940 /* GKDiscoverViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDiscoverViewCell.m; sourceTree = "<group>"; };
+		83FF54101D58412C0076C940 /* GKDiscoverViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKDiscoverViewCell.xib; sourceTree = "<group>"; };
 		DC8E2F6AEA2DE7D038F36FA6 /* Pods-TEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEST.release.xcconfig"; path = "Pods/Target Support Files/Pods-TEST/Pods-TEST.release.xcconfig"; sourceTree = "<group>"; };
 		E607A032FE2503DB80D485FA /* libPods-TEST.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TEST.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83FF53E91D582E590076C940 /* libsqlite3.tbd in Frameworks */,
 				4ED1343D5DD85074232C877A /* libPods-TEST.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +95,7 @@
 		4F079D5E0A6E2DC6372843C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83FF53E81D582E590076C940 /* libsqlite3.tbd */,
 				E607A032FE2503DB80D485FA /* libPods-TEST.a */,
 			);
 			name = Frameworks;
@@ -101,6 +131,7 @@
 		83FF538E1D580E460076C940 /* TEST */ = {
 			isa = PBXGroup;
 			children = (
+				83FF53D01D582A0A0076C940 /* Ohter */,
 				83FF53A61D580FCF0076C940 /* GKTabBarController */,
 				83FF53B61D5816B10076C940 /* Classes */,
 				83FF53921D580E460076C940 /* AppDelegate.h */,
@@ -199,6 +230,9 @@
 		83FF53BA1D5816B10076C940 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				83FF540E1D58412C0076C940 /* GKDiscoverViewCell.h */,
+				83FF540F1D58412C0076C940 /* GKDiscoverViewCell.m */,
+				83FF54101D58412C0076C940 /* GKDiscoverViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +293,8 @@
 		83FF53C11D5816B10076C940 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				83FF53DD1D582C580076C940 /* GKDataModel.h */,
+				83FF53DE1D582C580076C940 /* GKDataModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,6 +304,41 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		83FF53D01D582A0A0076C940 /* Ohter */ = {
+			isa = PBXGroup;
+			children = (
+				83FF54031D583A920076C940 /* GKDatabase */,
+				83FF53D41D582B9E0076C940 /* MBProgressHUD */,
+				83FF53D11D582A130076C940 /* NSObject+GKAlert.h */,
+				83FF53D21D582A130076C940 /* NSObject+GKAlert.m */,
+			);
+			path = Ohter;
+			sourceTree = "<group>";
+		};
+		83FF53D41D582B9E0076C940 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				83FF53D51D582B9E0076C940 /* MBProgressHUD+Extension.h */,
+				83FF53D61D582B9E0076C940 /* MBProgressHUD+Extension.m */,
+				83FF53D71D582B9E0076C940 /* MBProgressHUD.bundle */,
+				83FF53D81D582B9E0076C940 /* MBProgressHUD.h */,
+				83FF53D91D582B9E0076C940 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		83FF54031D583A920076C940 /* GKDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				83FF54041D583A920076C940 /* GKDatabase.h */,
+				83FF54051D583A920076C940 /* GKDatabaseManager.h */,
+				83FF54061D583A920076C940 /* GKDatabaseManager.m */,
+				83FF54071D583A920076C940 /* GKObjcProperty.h */,
+				83FF54081D583A920076C940 /* GKObjcProperty.m */,
+			);
+			path = GKDatabase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +406,8 @@
 				83FF539C1D580E460076C940 /* Assets.xcassets in Resources */,
 				83FF53CA1D581BE00076C940 /* GKMessageViewController.xib in Resources */,
 				83FF539A1D580E460076C940 /* Main.storyboard in Resources */,
+				83FF53DB1D582B9E0076C940 /* MBProgressHUD.bundle in Resources */,
+				83FF54121D58412C0076C940 /* GKDiscoverViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,11 +467,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				83FF53941D580E460076C940 /* AppDelegate.m in Sources */,
+				83FF53DA1D582B9E0076C940 /* MBProgressHUD+Extension.m in Sources */,
+				83FF54091D583A920076C940 /* GKDatabaseManager.m in Sources */,
+				83FF53D31D582A130076C940 /* NSObject+GKAlert.m in Sources */,
 				83FF53911D580E460076C940 /* main.m in Sources */,
+				83FF53DC1D582B9E0076C940 /* MBProgressHUD.m in Sources */,
+				83FF540A1D583A920076C940 /* GKObjcProperty.m in Sources */,
 				83FF53B51D5810500076C940 /* GKVerticalButton.m in Sources */,
 				83FF53C91D581BE00076C940 /* GKMessageViewController.m in Sources */,
 				83FF53B41D5810500076C940 /* GKTitleView.m in Sources */,
 				83FF53CE1D581BFD0076C940 /* GKDiscoverViewController.m in Sources */,
+				83FF54111D58412C0076C940 /* GKDiscoverViewCell.m in Sources */,
+				83FF53DF1D582C580076C940 /* GKDataModel.m in Sources */,
 				83FF53AF1D5810390076C940 /* GKTabBarController.m in Sources */,
 				83FF53C51D5816D90076C940 /* GKMainViewController.m in Sources */,
 			);
