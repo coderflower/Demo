@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vWZ-aH-iJ5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Cf7-V5-iR5">
+            <objects>
+                <tabBarController id="vWZ-aH-iJ5" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="nzC-5i-rzr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="yWV-f2-eCT" kind="relationship" relationship="viewControllers" id="SJe-pj-pPB"/>
+                        <segue destination="70a-Wu-McQ" kind="relationship" relationship="viewControllers" id="t9C-Vf-QAc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drz-6y-G2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-820" y="-89"/>
+        </scene>
+        <!--发现-->
+        <scene sceneID="40X-6x-09I">
+            <objects>
+                <navigationController id="70a-Wu-McQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="发现" id="80K-Uw-o4h"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ed1-cy-1ct">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zu2-p8-4Vs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-208" y="332"/>
+        </scene>
+        <!--信息-->
+        <scene sceneID="l3O-Bc-5jU">
+            <objects>
+                <navigationController id="yWV-f2-eCT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="信息" id="va3-cZ-clD"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nya-Gh-bdw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAy-1i-BcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="-710"/>
+        </scene>
+    </scenes>
+</document>
