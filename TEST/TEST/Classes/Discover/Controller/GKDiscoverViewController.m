@@ -25,11 +25,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tableView.estimatedRowHeight = 100;
+    self.tableView.contentInsetBottom = 49;
 }
 
 - (void)setupNotification {
-    GKLogFunc;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didSaveSuccess:) name:GKDidSaveDataSuccessNotification object:nil];
 }
 
@@ -66,7 +66,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GKDiscoverViewCell *cell = [GKDiscoverViewCell cellWithTableView:tableView];
-    
+
     cell.dataModel = self.dataSource[indexPath.row];
     
     return cell;
@@ -76,7 +76,6 @@
    
     GKDataModel * model = self.dataSource[indexPath.row];
     
-    NSLog(@"%f",model.cellHeight);
     return model.cellHeight;
 }
 

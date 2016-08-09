@@ -11,6 +11,13 @@
 		83CB83EF1D5962D8004E2A35 /* GKPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB83EE1D5962D8004E2A35 /* GKPhotosView.m */; };
 		83CB83F31D597533004E2A35 /* GKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB83F21D597533004E2A35 /* GKConst.m */; };
 		83CB83F91D5982B1004E2A35 /* GKPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB83F81D5982B1004E2A35 /* GKPlaceholderTextView.m */; };
+		83CB845C1D5A2A28004E2A35 /* GKPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB844E1D5A2A28004E2A35 /* GKPhotoViewController.m */; };
+		83CB845D1D5A2A28004E2A35 /* GKPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB84511D5A2A28004E2A35 /* GKPhoto.m */; };
+		83CB845E1D5A2A28004E2A35 /* GKWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB84541D5A2A28004E2A35 /* GKWaterFlowLayout.m */; };
+		83CB845F1D5A2A28004E2A35 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83CB84561D5A2A28004E2A35 /* 1.jpg */; };
+		83CB84601D5A2A28004E2A35 /* checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CB84571D5A2A28004E2A35 /* checked.png */; };
+		83CB84611D5A2A28004E2A35 /* unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 83CB84581D5A2A28004E2A35 /* unchecked.png */; };
+		83CB84621D5A2A28004E2A35 /* GKPhotoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB845B1D5A2A28004E2A35 /* GKPhotoViewCell.m */; };
 		83FF53911D580E460076C940 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF53901D580E460076C940 /* main.m */; };
 		83FF53941D580E460076C940 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF53931D580E460076C940 /* AppDelegate.m */; };
 		83FF539C1D580E460076C940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83FF539B1D580E460076C940 /* Assets.xcassets */; };
@@ -46,6 +53,17 @@
 		83CB83F21D597533004E2A35 /* GKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKConst.m; sourceTree = "<group>"; };
 		83CB83F71D5982B1004E2A35 /* GKPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPlaceholderTextView.h; sourceTree = "<group>"; };
 		83CB83F81D5982B1004E2A35 /* GKPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPlaceholderTextView.m; sourceTree = "<group>"; };
+		83CB844D1D5A2A28004E2A35 /* GKPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoViewController.h; sourceTree = "<group>"; };
+		83CB844E1D5A2A28004E2A35 /* GKPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhotoViewController.m; sourceTree = "<group>"; };
+		83CB84501D5A2A28004E2A35 /* GKPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhoto.h; sourceTree = "<group>"; };
+		83CB84511D5A2A28004E2A35 /* GKPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhoto.m; sourceTree = "<group>"; };
+		83CB84531D5A2A28004E2A35 /* GKWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKWaterFlowLayout.h; sourceTree = "<group>"; };
+		83CB84541D5A2A28004E2A35 /* GKWaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKWaterFlowLayout.m; sourceTree = "<group>"; };
+		83CB84561D5A2A28004E2A35 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		83CB84571D5A2A28004E2A35 /* checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checked.png; sourceTree = "<group>"; };
+		83CB84581D5A2A28004E2A35 /* unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unchecked.png; sourceTree = "<group>"; };
+		83CB845A1D5A2A28004E2A35 /* GKPhotoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotoViewCell.h; sourceTree = "<group>"; };
+		83CB845B1D5A2A28004E2A35 /* GKPhotoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhotoViewCell.m; sourceTree = "<group>"; };
 		83FF538C1D580E460076C940 /* TEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FF53901D580E460076C940 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83FF53921D580E460076C940 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +141,64 @@
 				DC8E2F6AEA2DE7D038F36FA6 /* Pods-TEST.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		83CB844B1D5A2A28004E2A35 /* GKPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				83CB844C1D5A2A28004E2A35 /* Controller */,
+				83CB844F1D5A2A28004E2A35 /* Model */,
+				83CB84521D5A2A28004E2A35 /* Other */,
+				83CB84551D5A2A28004E2A35 /* Resource */,
+				83CB84591D5A2A28004E2A35 /* View */,
+			);
+			path = GKPhotoBrowser;
+			sourceTree = "<group>";
+		};
+		83CB844C1D5A2A28004E2A35 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83CB844D1D5A2A28004E2A35 /* GKPhotoViewController.h */,
+				83CB844E1D5A2A28004E2A35 /* GKPhotoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		83CB844F1D5A2A28004E2A35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				83CB84501D5A2A28004E2A35 /* GKPhoto.h */,
+				83CB84511D5A2A28004E2A35 /* GKPhoto.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		83CB84521D5A2A28004E2A35 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				83CB84531D5A2A28004E2A35 /* GKWaterFlowLayout.h */,
+				83CB84541D5A2A28004E2A35 /* GKWaterFlowLayout.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		83CB84551D5A2A28004E2A35 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				83CB84561D5A2A28004E2A35 /* 1.jpg */,
+				83CB84571D5A2A28004E2A35 /* checked.png */,
+				83CB84581D5A2A28004E2A35 /* unchecked.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		83CB84591D5A2A28004E2A35 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83CB845A1D5A2A28004E2A35 /* GKPhotoViewCell.h */,
+				83CB845B1D5A2A28004E2A35 /* GKPhotoViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		83FF53831D580E460076C940 = {
@@ -329,6 +405,7 @@
 		83FF53D01D582A0A0076C940 /* Ohter */ = {
 			isa = PBXGroup;
 			children = (
+				83CB844B1D5A2A28004E2A35 /* GKPhotoBrowser */,
 				83FF54031D583A920076C940 /* GKDatabase */,
 				83FF53D41D582B9E0076C940 /* MBProgressHUD */,
 				83FF53D11D582A130076C940 /* NSObject+GKAlert.h */,
@@ -429,7 +506,10 @@
 			files = (
 				83FF53CF1D581BFD0076C940 /* GKDiscoverViewController.xib in Resources */,
 				83FF539F1D580E460076C940 /* LaunchScreen.storyboard in Resources */,
+				83CB84611D5A2A28004E2A35 /* unchecked.png in Resources */,
 				83FF539C1D580E460076C940 /* Assets.xcassets in Resources */,
+				83CB845F1D5A2A28004E2A35 /* 1.jpg in Resources */,
+				83CB84601D5A2A28004E2A35 /* checked.png in Resources */,
 				83FF53CA1D581BE00076C940 /* GKMessageViewController.xib in Resources */,
 				83FF53DB1D582B9E0076C940 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -495,16 +575,20 @@
 				83FF54151D5842F70076C940 /* UIView+GKExtension.m in Sources */,
 				83FF54091D583A920076C940 /* GKDatabaseManager.m in Sources */,
 				83FF53D31D582A130076C940 /* NSObject+GKAlert.m in Sources */,
+				83CB84621D5A2A28004E2A35 /* GKPhotoViewCell.m in Sources */,
 				83FF541B1D584A270076C940 /* NSString+GKExtension.m in Sources */,
 				83FF53911D580E460076C940 /* main.m in Sources */,
 				83FF53DC1D582B9E0076C940 /* MBProgressHUD.m in Sources */,
 				83FF540A1D583A920076C940 /* GKObjcProperty.m in Sources */,
 				83CB83F91D5982B1004E2A35 /* GKPlaceholderTextView.m in Sources */,
 				83CB83F31D597533004E2A35 /* GKConst.m in Sources */,
+				83CB845C1D5A2A28004E2A35 /* GKPhotoViewController.m in Sources */,
 				83FF53B51D5810500076C940 /* GKVerticalButton.m in Sources */,
 				83FF53C91D581BE00076C940 /* GKMessageViewController.m in Sources */,
 				83FF53B41D5810500076C940 /* GKTitleView.m in Sources */,
+				83CB845D1D5A2A28004E2A35 /* GKPhoto.m in Sources */,
 				83FF53CE1D581BFD0076C940 /* GKDiscoverViewController.m in Sources */,
+				83CB845E1D5A2A28004E2A35 /* GKWaterFlowLayout.m in Sources */,
 				83CB83EF1D5962D8004E2A35 /* GKPhotosView.m in Sources */,
 				83FF54111D58412C0076C940 /* GKDiscoverViewCell.m in Sources */,
 				83FF53DF1D582C580076C940 /* GKDataModel.m in Sources */,

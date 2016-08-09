@@ -9,7 +9,9 @@
 #import "GKMessageViewController.h"
 #import "GKPlaceholderTextView.h"
 #import "GKDataModel.h"
-@interface GKMessageViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+#import "GKPhotoViewController.h"
+#import "GKPhoto.h"
+@interface GKMessageViewController ()<GKPhotoViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet GKPlaceholderTextView *contentTextView;
 /** 图片数组 */
@@ -31,25 +33,14 @@
     return _photos;
 }
 - (IBAction)pickImage:(UIButton *)sender {
-    UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+    GKPhotoViewController * photoVc = [[GKPhotoViewController alloc]init];
+    photoVc.delegate = self;
+    UINavigationController * nav = [[UINavigationController alloc]initWithRootViewController:photoVc];
     
-    picker.delegate = self;
-    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    }
-    
-    [self presentViewController:picker animated:YES completion:nil];
+    [self presentViewController:nav animated:YES completion:nil];
+
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
-    if (self.photos.count >= 9) {
-        [MBProgressHUD showError:@"最多只能添加九张照片哦"];
-    } else {
-        [self.photos addObject:image];
-    }
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 - (IBAction)saveInToDB:(UIButton *)sender {
     
@@ -65,8 +56,18 @@
         [MBProgressHUD hideHUD];
         weakself.usernameField.text = nil;
         weakself.contentTextView.text = nil;
-        
+        [self.photos removeAllObjects];
     });
+}
+
+- (void)photoViewController:(GKPhotoViewController *)photoViewController didEndSelectedPhotos:(NSArray<GKPhoto *> *)photos {
+    for (GKPhoto * photo in photos) {
+        if (self.photos.count >= 9) {
+            break;
+        }else {
+            [self.photos addObject:photo.image];
+        }
+    }
 }
 
 @end

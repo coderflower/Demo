@@ -16,6 +16,8 @@ static NSString * const kDiscoverCellID = @"kDiscoverCellID";
 @property (strong, nonatomic)  UILabel *nameLabel;
 @property (strong, nonatomic)  UILabel *contentLabel;
 @property (strong, nonatomic)  GKPhotosView *photosView;
+/** 分割线 */
+@property(nonatomic, strong) UIView *lineView;
 @end
 @implementation GKDiscoverViewCell
 
@@ -43,6 +45,7 @@ static NSString * const kDiscoverCellID = @"kDiscoverCellID";
     [self addSubview:self.nameLabel];
     [self addSubview:self.contentLabel];
     [self addSubview:self.photosView];
+    [self addSubview:self.lineView];
 }
 
 #pragma mark -
@@ -71,6 +74,14 @@ static NSString * const kDiscoverCellID = @"kDiscoverCellID";
     return _contentLabel;
 }
 
+- (UIView *)lineView {
+    if (!_lineView) {
+        _lineView =  [[UIView alloc] init];
+        _lineView.backgroundColor = [UIColor lightGrayColor];
+    }
+    return _lineView;
+}
+
 - (void)setDataModel:(GKDataModel *)dataModel {
     _dataModel = dataModel;
     self.nameLabel.text = [NSString stringWithFormat:@"作者是: %@",dataModel.username];
@@ -86,8 +97,9 @@ static NSString * const kDiscoverCellID = @"kDiscoverCellID";
     self.contentLabel.frame = CGRectMake(margin, self.nameLabel.maxY + margin, contentMaxWidth, contentSize.height);
     CGSize photosSize = [GKPhotosView sizeWithCount:(int)self.dataModel.photos.count];
     self.photosView.frame = CGRectMake(margin, self.contentLabel.maxY + margin, photosSize.width, photosSize.height);
-    
+    // 计算高度
     self.dataModel.cellHeight = self.photosView.maxY + margin;
+    self.lineView.frame = CGRectMake(0,self.dataModel.cellHeight, self.width, 1);
 }
 
 @end
