@@ -72,6 +72,8 @@
     return cell;
 }
 
+#pragma mark -
+#pragma mark - =============== UITableViewDelegate ===============
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
    
     GKDataModel * model = self.dataSource[indexPath.row];
@@ -79,6 +81,13 @@
     return model.cellHeight;
 }
 
-
+#warning 手势冲突,待解决
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    GKDataModel * model = self.dataSource[indexPath.row];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.dataSource removeObject:model];
+        [self.tableView reloadData];
+    }
+}
 
 @end
