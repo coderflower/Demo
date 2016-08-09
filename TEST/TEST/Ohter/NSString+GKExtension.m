@@ -15,7 +15,7 @@
 #pragma mark - 计算label文字高度
 - (CGSize)gk_sizeWithFont:(UIFont *)font maxWidth:(CGFloat)maxWidth {
     CGRect bounds = [self boundingRectWithSize:CGSizeMake(maxWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
-    return bounds.size;
+    return CGSizeMake(maxWidth, bounds.size.height);
 }
 
 #pragma mark -

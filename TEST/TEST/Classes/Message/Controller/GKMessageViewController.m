@@ -7,10 +7,11 @@
 //
 
 #import "GKMessageViewController.h"
+#import "GKPlaceholderTextView.h"
 #import "GKDataModel.h"
 @interface GKMessageViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
-@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
+@property (weak, nonatomic) IBOutlet GKPlaceholderTextView *contentTextView;
 /** 图片数组 */
 @property(nonatomic, strong) NSMutableArray *photos;
 @end
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.contentTextView.placeholder = @"在这里输入说说内容";
 }
 
 - (NSMutableArray *)photos {
@@ -58,8 +60,12 @@
     // 发通知
     [[NSNotificationCenter defaultCenter] postNotificationName:GKDidSaveDataSuccessNotification object:data];
     [MBProgressHUD showMessage:@"保存成功"];
+    GKWeakSelf(self)
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [MBProgressHUD hideHUD];
+        weakself.usernameField.text = nil;
+        weakself.contentTextView.text = nil;
+        
     });
 }
 

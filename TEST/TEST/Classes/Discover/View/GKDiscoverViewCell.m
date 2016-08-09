@@ -83,7 +83,7 @@ static NSString * const kDiscoverCellID = @"kDiscoverCellID";
     self.nameLabel.frame = CGRectMake(0, margin, self.width, 21);
     CGFloat contentMaxWidth = kScreenWidth- margin * 2;
     CGSize contentSize = [self.dataModel.content gk_sizeWithFont:self.contentLabel.font maxWidth:contentMaxWidth];
-    self.contentLabel.frame = CGRectMake(margin, self.nameLabel.maxY + margin, contentSize.width, contentSize.height);
+    self.contentLabel.frame = CGRectMake(margin, self.nameLabel.maxY + margin, contentMaxWidth, contentSize.height);
     CGSize photosSize = [GKPhotosView sizeWithCount:(int)self.dataModel.photos.count];
     self.photosView.frame = CGRectMake(margin, self.contentLabel.maxY + margin, photosSize.width, photosSize.height);
     
