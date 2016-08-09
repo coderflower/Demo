@@ -7,7 +7,6 @@
 //
 
 #import "GKPhotosView.h"
-#import "UIView+GKFrame.h"
 static CGFloat const kPhotoWidth = 70;
 static CGFloat const kPhotoMargin = 10;
 #define kPhotosMaxColumn(count) ((count == 4)? 2:3)
@@ -25,8 +24,7 @@ static CGFloat const kPhotoMargin = 10;
     for (int i = 0; i<self.subviews.count; i++) {
         UIImageView *imageView = self.subviews[i];
         if (i < photos.count) { // 显示
-            NSData * imageData = [[NSData alloc] initWithBase64EncodedString:photos[i] options:0];
-            imageView.image = [UIImage imageWithData:imageData];
+            imageView.image = photos[i];
             imageView.hidden = NO;
         } else { // 隐藏
             imageView.hidden = YES;

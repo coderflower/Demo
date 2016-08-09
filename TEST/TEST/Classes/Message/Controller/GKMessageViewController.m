@@ -7,10 +7,7 @@
 //
 
 #import "GKMessageViewController.h"
-#import "NSObject+GKAlert.h"
-#import "MBProgressHUD+Extension.h"
 #import "GKDataModel.h"
-#import "GKDatabase.h"
 @interface GKMessageViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
@@ -22,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 创建表格
-    [[GKDatabaseManager sharedManager] creatTableWithClassName:[GKDataModel class]];
 }
 
 - (NSMutableArray *)photos {
@@ -45,18 +40,12 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
-    __weak typeof(self) weakself = self;
-    if (self.photos.count > 9) {
-        return;
+    if (self.photos.count >= 9) {
+        [MBProgressHUD showError:@"最多只能添加九张照片哦"];
+    } else {
+        [self.photos addObject:image];
     }
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        // 防止耗时操作执行完毕前weakself被提前释放
-        __strong typeof(weakself) strongself = weakself;
-        NSData * imageData = UIImagePNGRepresentation(image);
-        // base64编码
-        NSString * imageStr = [imageData base64EncodedStringWithOptions:0];
-        [strongself.photos addObject:imageStr];
-    });
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -66,8 +55,12 @@
     data.photos = [self.photos copy];
     data.username = self.usernameField.text;
     data.content = self.contentTextView.text;
-    // 插入数据
-    [[GKDatabaseManager sharedManager]insertDataFromObject:data];
+    // 发通知
+    [[NSNotificationCenter defaultCenter] postNotificationName:GKDidSaveDataSuccessNotification object:data];
+    [MBProgressHUD showMessage:@"保存成功"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUD];
+    });
 }
 
 @end

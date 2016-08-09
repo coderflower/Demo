@@ -7,10 +7,8 @@
 //
 
 #import "GKDiscoverViewCell.h"
-#import "UIView+GKExtension.h"
 #import "GKDataModel.h"
 #import "NSString+GKExtension.h"
-#import "UIView+GKFrame.h"
 #import "GKPhotosView.h"
 static CGFloat const margin = 20;
 static NSString * const kDiscoverCellID = @"kDiscoverCellID";
@@ -75,15 +73,15 @@ static NSString * const kDiscoverCellID = @"kDiscoverCellID";
 
 - (void)setDataModel:(GKDataModel *)dataModel {
     _dataModel = dataModel;
-    self.nameLabel.text = dataModel.username;
-    self.contentLabel.text = dataModel.content;
+    self.nameLabel.text = [NSString stringWithFormat:@"作者是: %@",dataModel.username];
+    self.contentLabel.text = [NSString stringWithFormat:@"内容是: %@",dataModel.content];
     self.photosView.photos = dataModel.photos;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.nameLabel.frame = CGRectMake(0, margin, self.width, 21);
-    CGFloat contentMaxWidth = [UIScreen mainScreen].bounds.size.width - margin * 2;
+    CGFloat contentMaxWidth = kScreenWidth- margin * 2;
     CGSize contentSize = [self.dataModel.content gk_sizeWithFont:self.contentLabel.font maxWidth:contentMaxWidth];
     self.contentLabel.frame = CGRectMake(margin, self.nameLabel.maxY + margin, contentSize.width, contentSize.height);
     CGSize photosSize = [GKPhotosView sizeWithCount:(int)self.dataModel.photos.count];
