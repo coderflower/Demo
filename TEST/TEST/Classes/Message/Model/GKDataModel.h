@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 @interface GKDataModel : NSObject
 /** 用户名 */
 @property(nonatomic, copy) NSString *username;
@@ -15,4 +15,6 @@
 @property(nonatomic, copy) NSString *content;
 /** 图片数组 */
 @property(nonatomic, strong) NSArray *photos;
+/** cell高度 */
+@property(nonatomic, assign) CGFloat cellHeight;
 @end

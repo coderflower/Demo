@@ -11,7 +11,6 @@
 #import "MBProgressHUD+Extension.h"
 #import "GKDataModel.h"
 #import "GKDatabase.h"
-#import "LJCryptorTools.h"
 @interface GKMessageViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *usernameField;
 @property (weak, nonatomic) IBOutlet UITextView *contentTextView;
@@ -47,6 +46,9 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
     __weak typeof(self) weakself = self;
+    if (self.photos.count > 9) {
+        return;
+    }
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         // 防止耗时操作执行完毕前weakself被提前释放
         __strong typeof(weakself) strongself = weakself;

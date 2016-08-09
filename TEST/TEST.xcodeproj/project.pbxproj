@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4ED1343D5DD85074232C877A /* libPods-TEST.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E607A032FE2503DB80D485FA /* libPods-TEST.a */; };
+		83CB83EF1D5962D8004E2A35 /* GKPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CB83EE1D5962D8004E2A35 /* GKPhotosView.m */; };
 		83FF53911D580E460076C940 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF53901D580E460076C940 /* main.m */; };
 		83FF53941D580E460076C940 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF53931D580E460076C940 /* AppDelegate.m */; };
 		83FF539A1D580E460076C940 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83FF53981D580E460076C940 /* Main.storyboard */; };
@@ -30,11 +31,15 @@
 		83FF54091D583A920076C940 /* GKDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF54061D583A920076C940 /* GKDatabaseManager.m */; };
 		83FF540A1D583A920076C940 /* GKObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF54081D583A920076C940 /* GKObjcProperty.m */; };
 		83FF54111D58412C0076C940 /* GKDiscoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF540F1D58412C0076C940 /* GKDiscoverViewCell.m */; };
-		83FF54121D58412C0076C940 /* GKDiscoverViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83FF54101D58412C0076C940 /* GKDiscoverViewCell.xib */; };
+		83FF54151D5842F70076C940 /* UIView+GKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF54141D5842F70076C940 /* UIView+GKExtension.m */; };
+		83FF54181D5843020076C940 /* UIView+GKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF54171D5843020076C940 /* UIView+GKFrame.m */; };
+		83FF541B1D584A270076C940 /* NSString+GKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FF541A1D584A270076C940 /* NSString+GKExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		767374337751061F95E6F3C3 /* Pods-TEST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEST.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TEST/Pods-TEST.debug.xcconfig"; sourceTree = "<group>"; };
+		83CB83ED1D5962D8004E2A35 /* GKPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKPhotosView.h; sourceTree = "<group>"; };
+		83CB83EE1D5962D8004E2A35 /* GKPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKPhotosView.m; sourceTree = "<group>"; };
 		83FF538C1D580E460076C940 /* TEST.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEST.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FF53901D580E460076C940 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		83FF53921D580E460076C940 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -74,7 +79,12 @@
 		83FF54081D583A920076C940 /* GKObjcProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKObjcProperty.m; sourceTree = "<group>"; };
 		83FF540E1D58412C0076C940 /* GKDiscoverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDiscoverViewCell.h; sourceTree = "<group>"; };
 		83FF540F1D58412C0076C940 /* GKDiscoverViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDiscoverViewCell.m; sourceTree = "<group>"; };
-		83FF54101D58412C0076C940 /* GKDiscoverViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKDiscoverViewCell.xib; sourceTree = "<group>"; };
+		83FF54131D5842F70076C940 /* UIView+GKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GKExtension.h"; sourceTree = "<group>"; };
+		83FF54141D5842F70076C940 /* UIView+GKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GKExtension.m"; sourceTree = "<group>"; };
+		83FF54161D5843020076C940 /* UIView+GKFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GKFrame.h"; sourceTree = "<group>"; };
+		83FF54171D5843020076C940 /* UIView+GKFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GKFrame.m"; sourceTree = "<group>"; };
+		83FF54191D584A270076C940 /* NSString+GKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GKExtension.h"; sourceTree = "<group>"; };
+		83FF541A1D584A270076C940 /* NSString+GKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GKExtension.m"; sourceTree = "<group>"; };
 		DC8E2F6AEA2DE7D038F36FA6 /* Pods-TEST.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEST.release.xcconfig"; path = "Pods/Target Support Files/Pods-TEST/Pods-TEST.release.xcconfig"; sourceTree = "<group>"; };
 		E607A032FE2503DB80D485FA /* libPods-TEST.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TEST.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -232,7 +242,8 @@
 			children = (
 				83FF540E1D58412C0076C940 /* GKDiscoverViewCell.h */,
 				83FF540F1D58412C0076C940 /* GKDiscoverViewCell.m */,
-				83FF54101D58412C0076C940 /* GKDiscoverViewCell.xib */,
+				83CB83ED1D5962D8004E2A35 /* GKPhotosView.h */,
+				83CB83EE1D5962D8004E2A35 /* GKPhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +324,12 @@
 				83FF53D41D582B9E0076C940 /* MBProgressHUD */,
 				83FF53D11D582A130076C940 /* NSObject+GKAlert.h */,
 				83FF53D21D582A130076C940 /* NSObject+GKAlert.m */,
+				83FF54161D5843020076C940 /* UIView+GKFrame.h */,
+				83FF54171D5843020076C940 /* UIView+GKFrame.m */,
+				83FF54131D5842F70076C940 /* UIView+GKExtension.h */,
+				83FF54141D5842F70076C940 /* UIView+GKExtension.m */,
+				83FF54191D584A270076C940 /* NSString+GKExtension.h */,
+				83FF541A1D584A270076C940 /* NSString+GKExtension.m */,
 			);
 			path = Ohter;
 			sourceTree = "<group>";
@@ -407,7 +424,6 @@
 				83FF53CA1D581BE00076C940 /* GKMessageViewController.xib in Resources */,
 				83FF539A1D580E460076C940 /* Main.storyboard in Resources */,
 				83FF53DB1D582B9E0076C940 /* MBProgressHUD.bundle in Resources */,
-				83FF54121D58412C0076C940 /* GKDiscoverViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,8 +484,10 @@
 			files = (
 				83FF53941D580E460076C940 /* AppDelegate.m in Sources */,
 				83FF53DA1D582B9E0076C940 /* MBProgressHUD+Extension.m in Sources */,
+				83FF54151D5842F70076C940 /* UIView+GKExtension.m in Sources */,
 				83FF54091D583A920076C940 /* GKDatabaseManager.m in Sources */,
 				83FF53D31D582A130076C940 /* NSObject+GKAlert.m in Sources */,
+				83FF541B1D584A270076C940 /* NSString+GKExtension.m in Sources */,
 				83FF53911D580E460076C940 /* main.m in Sources */,
 				83FF53DC1D582B9E0076C940 /* MBProgressHUD.m in Sources */,
 				83FF540A1D583A920076C940 /* GKObjcProperty.m in Sources */,
@@ -477,8 +495,10 @@
 				83FF53C91D581BE00076C940 /* GKMessageViewController.m in Sources */,
 				83FF53B41D5810500076C940 /* GKTitleView.m in Sources */,
 				83FF53CE1D581BFD0076C940 /* GKDiscoverViewController.m in Sources */,
+				83CB83EF1D5962D8004E2A35 /* GKPhotosView.m in Sources */,
 				83FF54111D58412C0076C940 /* GKDiscoverViewCell.m in Sources */,
 				83FF53DF1D582C580076C940 /* GKDataModel.m in Sources */,
+				83FF54181D5843020076C940 /* UIView+GKFrame.m in Sources */,
 				83FF53AF1D5810390076C940 /* GKTabBarController.m in Sources */,
 				83FF53C51D5816D90076C940 /* GKMainViewController.m in Sources */,
 			);

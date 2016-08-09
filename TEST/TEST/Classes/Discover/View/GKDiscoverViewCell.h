@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class GKDataModel;
 @interface GKDiscoverViewCell : UITableViewCell
-
+/** 模型数据 */
+@property(nonatomic, strong) GKDataModel *dataModel;
++ (instancetype)cellWithTableView:(UITableView *)tableView;
 @end

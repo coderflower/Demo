@@ -9,10 +9,13 @@
 #import "GKDiscoverViewController.h"
 #import "GKDatabase.h"
 #import "GKDataModel.h"
-static NSString * const kDiscoverCellID = @"kDiscoverCellID";
+#import "GKDiscoverViewCell.h"
+
 @interface GKDiscoverViewController ()
 /** 数据源 */
 @property(nonatomic, strong) NSArray *dataSource;
+/** 专门用于计算cell高度的工具 */
+@property(nonatomic, strong) GKDiscoverViewCell *cellHeightTool;
 @end
 
 @implementation GKDiscoverViewController
@@ -27,6 +30,13 @@ static NSString * const kDiscoverCellID = @"kDiscoverCellID";
     [self.tableView reloadData];
 }
 
+- (GKDiscoverViewCell *)cellHeightTool {
+    if (!_cellHeightTool) {
+        _cellHeightTool =  [GKDiscoverViewCell cellWithTableView:self.tableView];
+    }
+    return _cellHeightTool;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -37,13 +47,20 @@ static NSString * const kDiscoverCellID = @"kDiscoverCellID";
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kDiscoverCellID forIndexPath:indexPath];
+    GKDiscoverViewCell *cell = [GKDiscoverViewCell cellWithTableView:tableView];
     
-
+    cell.dataModel = self.dataSource[indexPath.row];
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
+    GKDataModel * model = self.dataSource[indexPath.row];
+    
+    NSLog(@"%f",model.cellHeight);
+    return model.cellHeight;
+}
 
 /*
 // Override to support conditional editing of the table view.
